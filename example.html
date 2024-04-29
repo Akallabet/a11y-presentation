@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Example</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-4">
+    <!-- Paragraph 1: Menu with 5 elements -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold mb-2">Menu</h1>
+        <ul class="list-disc pl-4">
+            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 1</li>
+            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 2</li>
+            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 3</li>
+            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 4</li>
+            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 5</li>
+        </ul>
+    </div>
+
+    <!-- Paragraph 2: Table with 10 rows and ten columns -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold mb-2">Table</h1>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">City 1</th>
+                    <th class="px-4 py-2">City 2</th>
+                    <th class="px-4 py-2">City 3</th>
+                    <th class="px-4 py-2">City 4</th>
+                    <th class="px-4 py-2">City 5</th>
+                    <th class="px-4 py-2">City 6</th>
+                    <th class="px-4 py-2">City 7</th>
+                    <th class="px-4 py-2">City 8</th>
+                    <th class="px-4 py-2">City 9</th>
+                    <th class="px-4 py-2">City 10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows with average temperatures -->
+                <tr>
+                    <td class="border px-4 py-2">25°C</td>
+                    <td class="border px-4 py-2">22°C</td>
+                    <td class="border px-4 py-2">20°C</td>
+                    <td class="border px-4 py-2">18°C</td>
+                    <td class="border px-4 py-2">15°C</td>
+                    <td class="border px-4 py-2">12°C</td>
+                    <td class="border px-4 py-2">10°C</td>
+                    <td class="border px-4 py-2">15°C</td>
+                    <td class="border px-4 py-2">18°C</td>
+                    <td class="border px-4 py-2">20°C</td>
+                </tr>
+                <!-- Add more rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Paragraph 3: HTML dialog triggered by button -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold mb-2">HTML Dialog</h1>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="openDialog()">Click me</button>
+        <dialog id="dialog" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <p>This is an HTML dialog that opens when you click the button above.</p>
+        </dialog>
+        <script>
+            function openDialog() {
+                document.getElementById('dialog').showModal();
+            }
+        </script>
+    </div>
+
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold mb-2">Slider</h1>
+        <input type="range" min="1" max="100" value="50" class="slider h-4 appearance-none w-full bg-gray-300 rounded-md outline-none" id="myRange">
+        <div class="flex justify-between mt-2">
+            <span class="text-gray-500">1</span>
+            <span class="text-gray-500">50</span>
+            <span class="text-gray-500">100</span>
+        </div>
+    </div>
+</body>
+</html>
