@@ -3,11 +3,16 @@
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.11"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "http-server ./public -p 3000",
+    "test": "playwright test"
   },
   "dependencies": {
+    "http-server": "^14.1.1",
     "playwright": "^1.43.1"
   },
   "author": "Graziano Statello",
