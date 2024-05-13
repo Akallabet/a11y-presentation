@@ -8,8 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 p-4">
+    <div class="mb-8" role="document" aria-label="buttons">
+        <h1 class="text-2xl font-bold mb-2">Buttons</h1>
+        <button class="mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Button</button>
+        <div role="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-20">Button 1</div>
+        <p class="text-lg text-gray-800">This is a paragraph.</p>
+        <p class="text-lg text-gray-800">This is another paragraph.</p>
+        <p class="text-lg text-gray-800"><span>This is a paragraph.</span><span>But with something more.</span></p>
+    </div>
     <!-- Paragraph 1: Menu with 5 elements -->
-    <div class="mb-8">
+    <div class="mb-8" role="document" aria-label="menu">
         <h1 class="text-2xl font-bold mb-2">Menu</h1>
         <ul class="list-disc pl-4">
             <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 1</li>

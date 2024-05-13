@@ -1,18 +1,27 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+const url = 'http://localhost:3000';
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+async function goToExample (page: Page)  {
+    await page.goto(`${url}/example.html`);
+}
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test.describe('buttons', () => {
+  test('nope', async ({ page }) => {
+    await goToExample(page);
+    const button = page.getByText('Button', {exact: true})
+    await expect(button).toBeVisible();
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+    const button1 = page.getByText('Button 1')
+    await expect(button1).toBeVisible();
+  })
+  test('get by role', async ({ page }) => {
+    await goToExample(page);
+    const button = page.getByRole('button', { name: 'Button 1' });
+    await expect(button).toBeVisible();
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});
+    await goToExample(page);
+    const button1 = page.getByText('Button 1');
+    await expect(button1).toBeVisible();
+  })
+})
