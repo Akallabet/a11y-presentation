@@ -8,42 +8,52 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 p-4">
-    <div class="mb-8" role="document" aria-label="buttons">
+    <div class="mb-8" role="document" aria-label="buttons" data-testid="buttons">
         <h1 class="text-2xl font-bold mb-2">Buttons</h1>
-        <button class="mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Button</button>
-        <div role="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-20">Button 1</div>
-        <p class="text-lg text-gray-800">This is a paragraph.</p>
-        <p class="text-lg text-gray-800">This is another paragraph.</p>
-        <p class="text-lg text-gray-800"><span>This is a paragraph.</span><span>But with something more.</span></p>
+        <button class="mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">New York</button>
+        <div role="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-20">Oslo</div>
+        <!-- <p class="text-lg text-gray-800">This is a paragraph.</p> -->
+        <!-- <p class="text-lg text-gray-800">This is another paragraph.</p> -->
+        <!-- <p class="text-lg text-gray-800"><span>This is a paragraph.</span><span>But with something more.</span></p> -->
     </div>
-    <!-- Paragraph 1: Menu with 5 elements -->
-    <div class="mb-8" role="document" aria-label="menu">
-        <h1 class="text-2xl font-bold mb-2">Menu</h1>
+    <div class="mb-8" role="document" aria-label="list" data-testid="list 1">
+        <h1 class="text-2xl font-bold mb-2">List 1</h1>
         <ul class="list-disc pl-4">
-            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 1</li>
-            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 2</li>
-            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 3</li>
-            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 4</li>
-            <li class="text-lg text-gray-800 flex items-center"><svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13.5m5.5 0h-21v16h21V4z" /></svg>Element 5</li>
+            <li class="text-lg text-gray-800 flex items-center">New York</li>
+            <li class="text-lg text-gray-800 flex items-center">Rome</li>
+            <li class="text-lg text-gray-800 flex items-center">Oslo</li>
+            <li class="text-lg text-gray-800 flex items-center">Berlin</li>
+            <li class="text-lg text-gray-800 flex items-center">Mexico City</li>
+            <li class="text-lg text-gray-800 flex items-center"><button >Button</button></li>
         </ul>
+    </div>
+    <div class="mb-8" role="document" aria-label="list" data-testid="list">
+        <h1 class="text-2xl font-bold mb-2">List 2</h1>
+        <div role="list" class="list-disc pl-4">
+            <div role="listitem" aria-label="Berlin" class="text-lg text-gray-800 flex items-center">Berlin</div>
+            <div role="listitem" aria-label="London" class="text-lg text-gray-800 flex items-center">London</div>
+            <div role="listitem" aria-label="Madrid" class="text-lg text-gray-800 flex items-center">Madrid</div>
+            <div role="listitem" aria-label="San Paolo" class="text-lg text-gray-800 flex items-center">San Paolo</div>
+            <div role="listitem" aria-label="Ankara" class="text-lg text-gray-800 flex items-center">Ankara</div>
+        </div>
     </div>
 
     <!-- Paragraph 2: Table with 10 rows and ten columns -->
-    <div class="mb-8">
+    <div class="mb-8" data-testid="table">
         <h1 class="text-2xl font-bold mb-2">Table</h1>
         <table class="table-auto">
             <thead>
                 <tr>
-                    <th class="px-4 py-2">City 1</th>
-                    <th class="px-4 py-2">City 2</th>
-                    <th class="px-4 py-2">City 3</th>
-                    <th class="px-4 py-2">City 4</th>
-                    <th class="px-4 py-2">City 5</th>
-                    <th class="px-4 py-2">City 6</th>
-                    <th class="px-4 py-2">City 7</th>
-                    <th class="px-4 py-2">City 8</th>
-                    <th class="px-4 py-2">City 9</th>
-                    <th class="px-4 py-2">City 10</th>
+                    <th class="px-4 py-2">Rome</th>
+                    <th class="px-4 py-2">New York</th>
+                    <th class="px-4 py-2">Berlin</th>
+                    <th class="px-4 py-2">Ankara</th>
+                    <th class="px-4 py-2">San Paolo</th>
+                    <th class="px-4 py-2">Oslo</th>
+                    <th class="px-4 py-2">Mexico City</th>
+                    <th class="px-4 py-2">Paris</th>
+                    <th class="px-4 py-2">London</th>
+                    <th class="px-4 py-2">Madrid</th>
                 </tr>
             </thead>
             <tbody>
@@ -76,6 +86,53 @@
             </tbody>
         </table>
     </div>
+    <!-- A set of divs with the same data and layout as the table above -->
+<div class="mb-8" data-testid="table">
+    <h1 class="text-2xl font-bold mb-2">Table</h1>
+    <div role="table" aria-label="accessible-table">
+    <div class="grid grid-cols-10 gap-0" role="row">
+        <div class="px-4 py-2" role="cell">Rome</div>
+        <div class="px-4 py-2">New York</div>
+        <div class="px-4 py-2">Berlin</div>
+        <div class="px-4 py-2">Ankara</div>
+        <div class="px-4 py-2">San Paolo</div>
+        <div class="px-4 py-2">Oslo</div>
+        <div class="px-4 py-2">Mexico City</div>
+        <div class="px-4 py-2">Paris</div>
+        <div class="px-4 py-2">London</div>
+        <div class="px-4 py-2">Madrid</div>
+    </div>
+        
+    <div class="grid grid-cols-10 gap-0" role="row">
+        <div class="border px-4 py-2">25°C</div>
+        <div class="border px-4 py-2">22°C</div>
+        <div class="border px-4 py-2">20°C</div>
+        <div class="border px-4 py-2">18°C</div>
+        <div class="border px-4 py-2">15°C</div>
+        <div class="border px-4 py-2">12°C</div>
+        <div class="border px-4 py-2">10°C</div>
+        <div class="border px-4 py-2">15°C</div>
+        <div class="border px-4 py-2">18°C</div>
+        <div class="border px-4 py-2">20°C</div>
+    </div>
+        
+    <div class="grid grid-cols-10 gap-0" role="row">
+        <!-- Add more divs with random temperatures here -->
+        <div class="border px-4 py-2">25°C</div>
+        <div class="border px-4 py-2">22°C</div>
+        <div class="border px-4 py-2">20°C</div>
+        <div class="border px-4 py-2">18°C</div>
+        <div class="border px-4 py-2">15°C</div>
+        <div class="border px-4 py-2">12°C</div>
+        <div class="border px-4 py-2">10°C</div>
+        <div class="border px-4 py-2">15°C</div>
+        <div class="border px-4 py-2">18°C</div>
+        <div class="border px-4 py-2">20°C</div>
+    </div>
+    </div>
+</div>
+    
+        
 
     <!-- Paragraph 3: HTML dialog triggered by button -->
     <div class="mb-8">

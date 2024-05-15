@@ -1,23 +1,36 @@
-# a11y-presentation
+# Welcome to Remix + Vite!
 
-npx playwright test
-    Runs the end-to-end tests.
+📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
 
-  npx playwright test --ui
-    Starts the interactive UI mode.
+## Development
 
-  npx playwright test --project=chromium
-    Runs the tests only on Desktop Chrome.
+Run the Vite dev server:
 
-  npx playwright test example
-    Runs the tests in a specific file.
+```shellscript
+npm run dev
+```
 
-  npx playwright test --debug
-    Runs the tests in debug mode.
+## Deployment
 
-  npx playwright codegen
-    Auto generate tests with Codegen.
+First, build your app for production:
 
-We suggest that you begin by typing:
+```sh
+npm run build
+```
 
-    npx playwright test
+Then run the app in production mode:
+
+```sh
+npm start
+```
+
+Now you'll need to pick a host to deploy it to.
+
+### DIY
+
+If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+- `build/server`
+- `build/client`
