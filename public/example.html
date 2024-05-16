@@ -11,7 +11,7 @@
     <div class="mb-8" role="document" aria-label="buttons" data-testid="buttons">
         <h1 class="text-2xl font-bold mb-2">Buttons</h1>
         <button class="mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">New York</button>
-        <div role="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-20">Oslo</div>
+        <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-20">Oslo</div>
         <!-- <p class="text-lg text-gray-800">This is a paragraph.</p> -->
         <!-- <p class="text-lg text-gray-800">This is another paragraph.</p> -->
         <!-- <p class="text-lg text-gray-800"><span>This is a paragraph.</span><span>But with something more.</span></p> -->
@@ -41,7 +41,7 @@
     <!-- Paragraph 2: Table with 10 rows and ten columns -->
     <div class="mb-8" data-testid="table">
         <h1 class="text-2xl font-bold mb-2">Table</h1>
-        <table class="table-auto">
+        <table class="table-auto" title="table1">
             <thead>
                 <tr>
                     <th class="px-4 py-2">Rome</th>
@@ -92,15 +92,15 @@
     <div role="table" aria-label="accessible-table">
     <div class="grid grid-cols-10 gap-0" role="row">
         <div class="px-4 py-2" role="cell">Rome</div>
-        <div class="px-4 py-2">New York</div>
-        <div class="px-4 py-2">Berlin</div>
-        <div class="px-4 py-2">Ankara</div>
-        <div class="px-4 py-2">San Paolo</div>
-        <div class="px-4 py-2">Oslo</div>
-        <div class="px-4 py-2">Mexico City</div>
-        <div class="px-4 py-2">Paris</div>
-        <div class="px-4 py-2">London</div>
-        <div class="px-4 py-2">Madrid</div>
+        <div class="px-4 py-2" role="cell">New York</div>
+        <div class="px-4 py-2" role="cell">Berlin</div>
+        <div class="px-4 py-2" role="cell">Ankara</div>
+        <div class="px-4 py-2" role="cell">San Paolo</div>
+        <div class="px-4 py-2" role="cell">Oslo</div>
+        <div class="px-4 py-2" role="cell">Mexico City</div>
+        <div class="px-4 py-2" role="cell">Paris</div>
+        <div class="px-4 py-2" role="cell">London</div>
+        <div class="px-4 py-2" role="cell">Madrid</div>
     </div>
         
     <div class="grid grid-cols-10 gap-0" role="row">
@@ -138,24 +138,21 @@
     <div class="mb-8">
         <h1 class="text-2xl font-bold mb-2">HTML Dialog</h1>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="openDialog()">Click me</button>
-        <dialog id="dialog" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <dialog data-testid="dialog" title="dialog" id="dialog" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <p>This is an HTML dialog that opens when you click the button above.</p>
         </dialog>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="openFakeDialog()">Click me also</button>
+        <div role="dialog" title="fake-dialog" id="fake-dialog" class="absolute hidden bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <p>This is an HTML dialog that opens when you click the button above.</p>
+        </div>
         <script>
             function openDialog() {
                 document.getElementById('dialog').showModal();
             }
+            function openFakeDialog() {
+                document.getElementById('fake-dialog').classList.remove('hidden');
+            }
         </script>
-    </div>
-
-    <div class="mb-8">
-        <h1 class="text-2xl font-bold mb-2">Slider</h1>
-        <input type="range" min="1" max="100" value="50" class="slider h-4 appearance-none w-full bg-gray-300 rounded-md outline-none" id="myRange">
-        <div class="flex justify-between mt-2">
-            <span class="text-gray-500">1</span>
-            <span class="text-gray-500">50</span>
-            <span class="text-gray-500">100</span>
-        </div>
     </div>
 </body>
 </html>
